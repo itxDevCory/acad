@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -9,7 +9,12 @@ export const metadata: Metadata = {
   description: 'Your personal AI mentor for building and selling profitable micro-SaaS products',
   keywords: ['micro-saas', 'ai', 'learning', 'coding', 'entrepreneurship'],
   authors: [{ name: 'MicroSaaS Academy' }],
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
   themeColor: '#1f2937',
 };
 

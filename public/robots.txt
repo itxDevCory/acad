@@ -1,0 +1,10 @@
+# robots.txt for MicroSaaS Academy AI
+
+User-agent: *
+Allow: /
+
+# Disallow API endpoints from being crawled
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://your-domain.vercel.app/sitemap.xml

@@ -3,6 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 
+  // Output configuration for Docker
+  output: process.env.DOCKER_BUILD === 'true' ? 'standalone' : undefined,
+
   // Environment variables available to the browser
   env: {
     NEXT_PUBLIC_APP_NAME: 'MicroSaaS Academy AI',
@@ -52,10 +55,20 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
           }
         ]
       }
     ];
+  },
+
+  // Image optimization
+  images: {
+    domains: [],
+    formats: ['image/avif', 'image/webp'],
   },
 };
 
