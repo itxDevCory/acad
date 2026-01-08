@@ -25,10 +25,32 @@ A complete AI-powered system that:
 
 ## Quick Start
 
+### Step 1: Setup API Keys (Required for Online Mode)
+
+1. **Get your OpenAI API key:**
+   - Visit [OpenAI Platform](https://platform.openai.com/api-keys)
+   - Create a new secret key
+   - Copy the key (starts with `sk-proj-...` or `sk-...`)
+
+2. **Configure your environment:**
+   ```bash
+   # The .env.local file has been created for you
+   # Edit it and add your OpenAI API key
+   nano .env.local  # or use your preferred editor
+   ```
+
+3. **Verify your setup:**
+   ```bash
+   npm run verify-env
+   ```
+
+📚 **Detailed instructions:** See [SETUP_API_KEYS.md](./SETUP_API_KEYS.md)
+
 ### Option 1: Online (iPad + Mac)
 ```bash
 cd microsaas-academy
 npm install
+npm run verify-env  # Check your API keys
 npm run dev
 ```
 Open on iPad: `http://YOUR_MAC_IP:3000`
